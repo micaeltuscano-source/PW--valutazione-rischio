@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Guida Fattore di Rischio</title>
+
+<!-- COLLEGAMENTO CSS (stessa cartella) -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Libreria QR Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+<main class="container">
+
+<header>
+<h1>Risk Assessment Tool</h1>
+<p>Guida al calcolo del fattore di rischio</p>
+</header>
+
+<section class="download-card">
+<h2>Documento PDF</h2>
+<p>Scarica la guida completa</p>
+
+<a href="guida-fattore-rischio.pdf" class="btn-download" download>
+Scarica PDF
+</a>
+</section>
+
+<section class="qr-section">
+<h3>QR Code</h3>
+<p>Scansiona per scaricare</p>
+<div id="qrcode"></div>
+</section>
+
+</main>
+
+<!-- JS QR CODE -->
+<script>
+window.onload = function () {
+new QRCode(document.getElementById("qrcode"), {
+text: "https://tuosito.it/guida-fattore-rischio.pdf",
+width: 180,
+height: 180,
+colorDark: "#2c3e50",
+colorLight: "#ffffff",
+correctLevel: QRCode.CorrectLevel.H
+});
+};
+</script>
+
+</body>
+</html>
