@@ -1,0 +1,83 @@
+
+/* Sfondo*/
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: rgb(0,79,118);
+display: flex;
+justify-content: center;
+padding: 20px;
+}
+
+/* Quadrato principale di base */
+.container {
+background: rgb(237, 216, 175);
+width: 100%;
+max-width: 500px;
+padding: 30px;
+border-radius: 15px;
+text-align: center;
+box-shadow: 0 4px 15px rgb(0, 0, 0);
+}
+
+
+h1 {
+margin-bottom: 10px;
+}
+
+/* frasi piccole */
+
+p {
+color: #a4783b;
+}
+
+
+/* Tasto per scaricare il PDF*/
+
+.btn-download {
+display: inline-block;
+margin-top: 20px;
+padding: 15px 25px;
+background: #cb934e;
+color: white;
+text-decoration: none;
+border-radius: 6px;
+font-weight: bold;
+}
+
+
+/* QR code margini e immagine */
+
+#qrcode {
+margin-top: 20px;
+}
+
+
+#qrcode img {
+border: 5px solid rgb(255, 253, 253);
+outline: 1px solid #fffefe;
+}
+
+
+
+@media (max-width: 600px) { 
+.container { 
+padding: 15px; 
+box-shadow: none; 
+}
+
+
+
+
+.btn-download {
+  display: inline-block;
+  padding: 15px 25px;
+  background: #cb934e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  max-width: 250px;
+  width: 100%;
+}
+}
