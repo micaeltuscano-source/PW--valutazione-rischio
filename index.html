@@ -1,0 +1,67 @@
+
+<!-- Inizio del progetto html con codici utilizzo per pc e dispositivi mobili -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fattore di rischio e Cybershield</title>
+
+  <!-- dile css esterno "style.css" -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Libreria QR code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header>
+      <h1>Risk Assessment Tool</h1>
+      <p>Come calcolare il fattore di rischio?</p>
+    </header>
+
+    <!-- Download per PDF -->
+    <section class="download-card">
+      <h2>Documento PDF</h2>
+      <p>Scarica la guida completa per il calcolo del rischio</p>
+
+      <a href="https://micaeltuscano-source.github.io/PW--valutazione-rischio/PW n2 Tuscano Micael Rischio e sicurezza.pdf"
+         class="btn-download"
+         download>
+        Scarica PDF
+      </a>
+    </section>
+
+    <!-- QR code per il download del PDF -->
+    <section class="qr-section">
+      <h3>QR Code per download rapido</h3>
+      <p>Scansiona il codice per accedere al file</p>
+
+      <div id="qrcode"></div>
+    </section>
+
+  </main>
+
+  <!-- codice per il QR code -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const pdfLink = "https://micaeltuscano-source.github.io/PW--valutazione-rischio/PW n2 Tuscano Micael Rischio e sicurezza.pdf";
+
+      new QRCode(document.getElementById("qrcode"), {
+        text: pdfLink,
+        width: 180,
+        height: 180,
+        colorDark: "#2c3e50",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+
+    });
+  </script>
+
+</body>
+</html>
